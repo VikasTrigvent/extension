@@ -1,0 +1,18 @@
+{
+    "manifest_version":3,
+    "name":"My First Extension",
+    "description":"This Extension is for injecting content script inside google.com",
+    "version":"1.0.0",
+    "web_accessible_resources":[{
+        "resources":["img/logo.png"],
+        "matches": ["https://*.google.com/*"]
+    }], 
+    "content_scripts": [
+        {
+          "matches": ["https://*.google.com/*"],
+          "run_at": "document_end",
+          "js": ["content-script.js"]
+        } 
+      ]
+}
+

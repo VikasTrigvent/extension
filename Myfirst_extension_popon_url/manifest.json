@@ -1,0 +1,32 @@
+{
+    "manifest_version":3,
+    "name":"Fetch The URL",
+    "description":"This Extension for Fetch the URL From Enter the input text value",
+    "version":"1.0.0",
+    "web_accessible_resources":[{
+        "resources":["img/logo.png"],
+        "matches": ["https://*.google.com/*"]
+    }], 
+    "action":{
+      "default_title":"My First Extension",
+      "default_popup":"popup.html"
+    },
+    "permissions":[
+      "tabs" ,"activeTab"
+    ],
+ 
+    "content_scripts": [
+        {
+          "matches": ["https://*.google.com/*"],
+          "run_at": "document_end",
+          "css":["content-script.css"],
+          "js": ["content-script.js"]
+        } ,
+        {
+          "matches": ["https://*.flipkart.com/*"],
+          "run_at": "document_end",
+          "js": ["flip-content-script.js"]
+        } 
+      ]
+}
+

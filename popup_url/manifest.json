@@ -1,0 +1,26 @@
+{
+    "manifest_version":3,
+    "name":"Url Fetch",
+    "description":"this extention for fetch the Url",
+    "version":"1.0.0",
+    "web_accessible_resources":[{
+        "resources":["images/logo.png"],
+        "matches":["https://*.google.com/*"]
+    }],
+    "action":{
+        "default_title":"It's url extention",
+        "default_popup":"popup.html"
+    },
+    "background":
+    {
+        "service_worker": "background.js"
+    },
+
+    "content_scripts":[
+        {
+            "matches": ["https://*.google.com/*"],
+            "css":["content-script.css"],
+            "js":["content-script.js"] 
+        }
+    ]
+}

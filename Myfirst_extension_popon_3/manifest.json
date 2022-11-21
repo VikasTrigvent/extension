@@ -1,0 +1,32 @@
+{
+    "manifest_version":3,
+    "name":"My First Extension",
+    "description":"This Extension is for injecting content script inside google.com",
+    "version":"1.0.0",
+    "web_accessible_resources":[{
+        "resources":["img/logo.png"],
+        "matches": ["https://*.google.com/*"]
+    }], 
+    "action":{
+      "default_title":"My First Extension",
+      "default_popup":"popup.html"
+    },
+    "permissions":[
+      "tabs" ,"activeTab","storage"
+    ],
+ 
+    "content_scripts": [
+        {
+          "matches": ["https://*.google.com/*"],
+          "run_at": "document_end",
+          "css":["content-script.css"],
+          "js": ["content-script.js"]
+        } ,
+        {
+          "matches": ["https://*.flipkart.com/*"],
+          "run_at": "document_end",
+          "js": ["flip-content-script.js"]
+        } 
+      ]
+}
+

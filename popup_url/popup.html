@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="jQuery.js"></script>
     <title>Document</title>
+    <style>
+      body{
+       width: 500px; 
+        height:  100%;
+        position: relative;
+        vertical-align:middle;
+        background-color: bisque;
+      }  
+        
+    </style>
 </head>
 <body>
-    <h1>Fetch The URL</h1>
-    <form action="">
+    <center>
+        <h1>Fetch The URL</h1>
+    
         <label for="fname">Enter The Url: </label>
         <input type="text" id="url" name="url" value=""><br><br>  
-        <input type="submit" id="btn" class="btn" value="Submit">
-    </form>
-
-    <!-- <h1>Image Grabber</h1>
-    <button id="grabBtn">GRAB NOW</button> -->
-
+        <input type="button" id="btn" class="btn" value="Submit"><br><br>
+        <image src="" width="250" height="250" id="imagetoShow"/>
 
       <script src="popup.js"></script>
+    </center>
+    
 </body>
 </html>

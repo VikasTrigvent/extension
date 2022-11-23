@@ -1,0 +1,30 @@
+{
+    "manifest_version":3,
+    "name":"Word's  Fetch",
+    "description":"This extention for fetch the Word's in Url",
+    "version":"1.0.0",
+    "web_accessible_resources":[{
+        "resources":["images/logo.png"],
+        "matches":["https://*.google.com/*"]
+    }],
+    "action":{
+        "default_title":"It's url extention",
+        "default_popup":"popup.html"
+    },
+  
+    "host_permissions": [
+        "*://castingcrane.imgix.net/*",
+        "http://*.google.com/"
+    ],
+    "permissions": [
+        "tabs", "http://*/*"
+    ],
+
+    "content_scripts":[
+        {
+            "matches": ["https://*/*"],
+            "css":["content-script.css"],
+            "js":["content-script.js"] 
+        }
+    ]
+}

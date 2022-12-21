@@ -1,0 +1,15 @@
+{
+    "manifest_version":3,
+    "name":"Coding Quote Extesntion",
+    "description":"This Extesntion for find quote in url Page",
+    "version":"1.0.2",
+    "chrome_url_overrides":{
+        "newtab":"index.html"
+    },  
+
+    "permissions":[
+        "storage"
+    ]
+       
+    
+}  
